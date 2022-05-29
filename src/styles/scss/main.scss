@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Roboto:ital,wght@0,700;1,400&display=swap");
+
+@import "fontawesome.scss";
+@import "solid.scss";
+@import"regular.scss";
+
+// Font Variables
+$roboto: "Roboto", serif;
+$gochi-hand: "Gochi Hand", sans-serif;
+
+// Color variables
+// User Interface
+$primary-color: #f6d524;
+$secondary-color: #e1c323;
+$white: #ffffff;
+
+// Background Elements
+$background-color: #83b6d2e5;
+
+// Text elements
+$primary-text-color: #4b4b4b;
+$secondary-text-color: #ffffff;
+
+// Resets
+ul li{
+    margin:0;
+    padding:0;
+    text-indent: 0;
+    list-style-type: none;
+}
+// Styles
+html{
+    margin:0;
+    padding:0;
+}
+
+body {
+    margin: auto;
+    max-width: 1680px;
+    font-family: $roboto;
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: $primary-text-color;
+}
+
+a {
+    all: unset;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $gochi-hand;
+    font-weight: 400;
+    width: 660px;
+    height: 270px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 78px;
+    line-height: 90px;
+}
+
+h1 {
+    font-size: 4.875rem;
+    line-height: 5.625rem;
+    color: $secondary-text-color;
+}
+
+img {
+    width: 257px;
+height: 40px;
+}
+
+button {
+    background-color: $primary-color;
+    border: none;
+    border-radius: 100px;
+    color: $secondary-text-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 40px;
+    gap: 5px;
+    width: 330px;
+    height: 62px;
+    font-family: "Myriad Pro";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+button:hover {
+    background-color: $secondary-color;
+}
+
+header {
+    position: fixed;
+    z-index: 1;
+    background-color: transparent;
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 30px;
+gap: 100px;
+
+width: 1680px;
+height: 100px;
+    
+}
+
+header:hover {
+    background-color: $white;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+}
+
+main {
+    min-height: 1080px;
+}
+section {
+    min-height: 100vh;
+
+}
+.shop-navigation{
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 30px;
+
+width: 581.5px;
+height: 40px;
+}
+.main-navigation{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    width: 581.5px;
+    height: 31px;
+
+    li{
+        padding: 5px 15px;
+    }
+}
+
+.dropdown-menu{
+    display: none;
+}
+.hero{
+    height: 100%;
+    background: linear-gradient(0deg, rgba(131, 182, 210, 0.9), rgba(131, 182, 210, 0.9)),
+        url("../assets/background-image.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+}
+.shadow {
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+}
