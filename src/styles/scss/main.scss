@@ -1,39 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Roboto:ital,wght@0,700;1,400&display=swap");
-
-@import "fontawesome.scss";
-@import "solid.scss";
-@import"regular.scss";
-
-// Font Variables
-$roboto: "Roboto", serif;
-$gochi-hand: "Gochi Hand", sans-serif;
-
-// Color variables
-// User Interface
-$primary-color: #f6d524;
-$secondary-color: #e1c323;
-$white: #ffffff;
-
-// Background Elements
-$background-color: #83b6d2e5;
-
-// Text elements
-$primary-text-color: #4b4b4b;
-$secondary-text-color: #ffffff;
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+@import "./custom_variables.scss";
+@import "./variables";
+@import "./fontawesome.scss";
+@import "./solid.scss";
+@import "./brands.scss";
+@import "./regular.scss";
 
 // Resets
-ul li{
-    margin:0;
-    padding:0;
+ul li {
+    margin: 0;
+    padding: 0;
     text-indent: 0;
     list-style-type: none;
 }
-// Styles
-html{
-    margin:0;
-    padding:0;
+
+html {
+    margin: 0;
+    padding: 0;
 }
 
+a {
+    all: unset;
+    cursor: pointer;
+}
+// Styles
 body {
     margin: auto;
     max-width: 1680px;
@@ -41,10 +31,10 @@ body {
     font-weight: 700;
     font-size: 1.125rem;
     color: $primary-text-color;
-}
 
-a {
-    all: unset;
+span {
+    font-style: normal;
+    font-family: "Font Awesome 5 Free";
 }
 
 h1,
@@ -71,7 +61,7 @@ h1 {
 
 img {
     width: 257px;
-height: 40px;
+    height: 40px;
 }
 
 button {
@@ -83,7 +73,6 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 18px 40px;
     gap: 5px;
     width: 330px;
     height: 62px;
@@ -95,77 +84,190 @@ button {
 }
 
 button:hover {
+    transition: $transition-normal;
     background-color: $secondary-color;
 }
 
 header {
     position: fixed;
-    z-index: 1;
-    background-color: transparent;
-    display: flex;
-flex-direction: row;
-align-items: center;
-padding: 30px;
-gap: 100px;
-
-width: 1680px;
-height: 100px;
-    
+    transition: $transition-normal;
 }
 
 header:hover {
+    transition: $transition-normal;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.05);
     background-color: $white;
 }
 
 nav {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
-    padding: 0px;
+    gap: 100px;
+    width: 1680px;
+    height: 100px;
+    a:hover {
+        transition: $transition-normal;
+        color: #f6d524;
+    }
+}
+
+input {
+    padding: 8px 10px;
+
+    width: 369.5px;
+    height: 40px;
+    background-color: transparent;
+
+    /* Text/Body */
+
+    border: 1px solid #4b4b4b;
+    border-radius: 40px;
+    box-sizing: border-box;
 }
 
 main {
     min-height: 1080px;
 }
+
+footer {
+    height: 100vh;
+}
 section {
     min-height: 100vh;
-
 }
-.shop-navigation{
+.shop-navigation {
     display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 30px;
-
-width: 581.5px;
-height: 40px;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 30px;
+    justify-content: end;
+    width: 581.5px;
+    height: 40px;
+    a {
+        text-align: right;
+        height: 22px;
+    }
 }
-.main-navigation{
+.main-navigation {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     padding: 0px;
     width: 581.5px;
     height: 31px;
-
-    li{
+    li {
         padding: 5px 15px;
     }
 }
 
-.dropdown-menu{
+.dropdown-menu {
     display: none;
+    flex-direction: column;
+    align-items: left;
+    position: absolute;
+    margin-top: 11.5px;
+    padding: 0px;
+    gap: 15px;
+    left: 0px;
+    background-color: white;
+    color: $primary-text-color;
+    width: 384px;
+    height: 333px;
+    font-weight: $normal;
+    line-height: 32px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.15);
+    a:hover {
+        text-decoration-line: underline;
+        color: $primary-text-color !important;
+    }
 }
-.hero{
+
+.visible {
+    display: flex;
+}
+
+.dropdown-container {
+    padding-bottom: 40.5px;
+    position: relative;
+}
+
+.dropdown-container:hover {
+    padding-bottom: 11.5px;
+    transition: $transition-normal;
+    padding: 5px 15px;
+    gap: 3px;
+    position: relative;
+
+    background: #f6d524;
+    border-radius: 100px;
+    color: $secondary-text-color !important;
+    a:hover {
+        color: #ffffff;
+    }
+}
+
+.dropdown-container:hover .dropdown-menu,
+nav:hover .dropdown-menu:hover {
+    display: flex;
+}
+.hero {
     height: 100%;
     background: linear-gradient(0deg, rgba(131, 182, 210, 0.9), rgba(131, 182, 210, 0.9)),
         url("../assets/background-image.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 165px;
 
+    h1 {
+        width: 660px;
+        height: 270px;
+    }
 }
 .shadow {
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2);
     border-radius: 100px;
+}
+
+// Parallax
+
+.parallax-wrapper {
+    overflow-y: hidden;
+}
+
+.parallax {
+    background-size: cover;
+    background-position: center;
+}
+
+.searchBar {
+    position: relative;
+
+    ::placeholder {
+        padding-left: 1rem;
+    }
+}
+
+.searchBar span {
+    position: absolute;
+    color: gray;
+    left: 1rem;
+    top: 12px;
+}
+
+.account {
+    width: 116px;
+
+    span{
+        margin-right: 5px;
+    }
+}
 }

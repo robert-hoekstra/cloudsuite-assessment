@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Roboto:ital,wght@0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
 /*!
  * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -6070,8 +6070,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("../webfonts/fa-solid-900.eot");
-  src: url("../webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.woff") format("woff"), url("../webfonts/fa-solid-900.ttf") format("truetype"), url("../webfonts/fa-solid-900.svg#fontawesome") format("svg");
+  src: url("./webfonts/fa-solid-900.eot");
+  src: url("./webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("./webfonts/fa-solid-900.woff2") format("woff2"), url("./webfonts/fa-solid-900.woff") format("woff"), url("./webfonts/fa-solid-900.ttf") format("truetype"), url("./webfonts/fa-solid-900.svg#fontawesome") format("svg");
 }
 .fa,
 .fas {
@@ -6084,12 +6084,29 @@ readers do not read off random characters that represent icons */
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 @font-face {
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("./webfonts/fa-brands-400.eot");
+  src: url("./webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("./webfonts/fa-brands-400.woff2") format("woff2"), url("./webfonts/fa-brands-400.woff") format("woff"), url("./webfonts/fa-brands-400.ttf") format("truetype"), url("./webfonts/fa-brands-400.svg#fontawesome") format("svg");
+}
+.fab {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+/*!
+ * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
   font-family: "Font Awesome 5 Free";
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("../webfonts/fa-regular-400.eot");
-  src: url("../webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.woff") format("woff"), url("../webfonts/fa-regular-400.ttf") format("truetype"), url("../webfonts/fa-regular-400.svg#fontawesome") format("svg");
+  src: url("./webfonts/fa-regular-400.eot");
+  src: url("./webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("./webfonts/fa-regular-400.woff2") format("woff2"), url("./webfonts/fa-regular-400.woff") format("woff"), url("./webfonts/fa-regular-400.ttf") format("truetype"), url("./webfonts/fa-regular-400.svg#fontawesome") format("svg");
 }
 .far {
   font-family: "Font Awesome 5 Free";
@@ -6108,6 +6125,11 @@ html {
   padding: 0;
 }
 
+a {
+  all: unset;
+  cursor: pointer;
+}
+
 body {
   margin: auto;
   max-width: 1680px;
@@ -6116,17 +6138,16 @@ body {
   font-size: 1.125rem;
   color: #4b4b4b;
 }
-
-a {
-  all: unset;
+body span {
+  font-style: normal;
+  font-family: "Font Awesome 5 Free";
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
   font-family: "Gochi Hand", sans-serif;
   font-weight: 400;
   width: 660px;
@@ -6136,19 +6157,16 @@ h6 {
   font-size: 78px;
   line-height: 90px;
 }
-
-h1 {
+body h1 {
   font-size: 4.875rem;
   line-height: 5.625rem;
   color: #ffffff;
 }
-
-img {
+body img {
   width: 257px;
   height: 40px;
 }
-
-button {
+body button {
   background-color: #f6d524;
   border: none;
   border-radius: 100px;
@@ -6157,7 +6175,6 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 18px 40px;
   gap: 5px;
   width: 330px;
   height: 62px;
@@ -6167,54 +6184,66 @@ button {
   font-size: 22px;
   line-height: 26px;
 }
-
-button:hover {
+body button:hover {
+  transition: 0.3s;
   background-color: #e1c323;
 }
-
-header {
+body header {
   position: fixed;
-  z-index: 1;
-  background-color: transparent;
+  transition: 0.3s;
+}
+body header:hover {
+  transition: 0.3s;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+}
+body nav {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
-  padding: 30px;
   gap: 100px;
   width: 1680px;
   height: 100px;
 }
-
-header:hover {
-  background-color: #ffffff;
+body nav a:hover {
+  transition: 0.3s;
+  color: #f6d524;
 }
-
-nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
+body input {
+  padding: 8px 10px;
+  width: 369.5px;
+  height: 40px;
+  background-color: transparent;
+  /* Text/Body */
+  border: 1px solid #4b4b4b;
+  border-radius: 40px;
+  box-sizing: border-box;
 }
-
-main {
+body main {
   min-height: 1080px;
 }
-
-section {
+body footer {
+  height: 100vh;
+}
+body section {
   min-height: 100vh;
 }
-
-.shop-navigation {
+body .shop-navigation {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0px;
   gap: 30px;
+  justify-content: end;
   width: 581.5px;
   height: 40px;
 }
-
-.main-navigation {
+body .shop-navigation a {
+  text-align: right;
+  height: 22px;
+}
+body .main-navigation {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -6222,24 +6251,99 @@ section {
   width: 581.5px;
   height: 31px;
 }
-.main-navigation li {
+body .main-navigation li {
   padding: 5px 15px;
 }
-
-.dropdown-menu {
+body .dropdown-menu {
   display: none;
+  flex-direction: column;
+  align-items: left;
+  position: absolute;
+  margin-top: 11.5px;
+  padding: 0px;
+  gap: 15px;
+  left: 0px;
+  background-color: white;
+  color: #4b4b4b;
+  width: 384px;
+  height: 333px;
+  font-weight: 400;
+  line-height: 32px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.15);
 }
-
-.hero {
+body .dropdown-menu a:hover {
+  text-decoration-line: underline;
+  color: #4b4b4b !important;
+}
+body .visible {
+  display: flex;
+}
+body .dropdown-container {
+  padding-bottom: 40.5px;
+  position: relative;
+}
+body .dropdown-container:hover {
+  padding-bottom: 11.5px;
+  transition: 0.3s;
+  padding: 5px 15px;
+  gap: 3px;
+  position: relative;
+  background: #f6d524;
+  border-radius: 100px;
+  color: #ffffff !important;
+}
+body .dropdown-container:hover a:hover {
+  color: #ffffff;
+}
+body .dropdown-container:hover .dropdown-menu,
+body nav:hover .dropdown-menu:hover {
+  display: flex;
+}
+body .hero {
   height: 100%;
   background: linear-gradient(0deg, rgba(131, 182, 210, 0.9), rgba(131, 182, 210, 0.9)), url("../assets/background-image.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 165px;
 }
-
-.shadow {
+body .hero h1 {
+  width: 660px;
+  height: 270px;
+}
+body .shadow {
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2);
   border-radius: 100px;
+}
+body .parallax-wrapper {
+  overflow-y: hidden;
+}
+body .parallax {
+  background-size: cover;
+  background-position: center;
+}
+body .searchBar {
+  position: relative;
+}
+body .searchBar ::placeholder {
+  padding-left: 1rem;
+}
+body .searchBar span {
+  position: absolute;
+  color: gray;
+  left: 1rem;
+  top: 12px;
+}
+body .account {
+  width: 116px;
+}
+body .account span {
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=main.css.map */
