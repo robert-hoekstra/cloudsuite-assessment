@@ -32,6 +32,8 @@ body {
     font-size: 1.125rem;
     color: $primary-text-color;
 
+}
+
 span {
     font-style: normal;
     font-family: "Font Awesome 5 Free";
@@ -89,8 +91,11 @@ button:hover {
 }
 
 header {
-    position: fixed;
+    z-index: 1;
+    position: sticky;
+    top:-1px;
     transition: $transition-normal;
+    margin-bottom: -100px;
 }
 
 header:hover {
@@ -218,7 +223,7 @@ nav:hover .dropdown-menu:hover {
 }
 .hero {
     height: 100%;
-    background: linear-gradient(0deg, rgba(131, 182, 210, 0.9), rgba(131, 182, 210, 0.9)),
+    background: linear-gradient(0deg, $bg-azure, $bg-azure),
         url("../assets/background-image.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -270,4 +275,7 @@ nav:hover .dropdown-menu:hover {
         margin-right: 5px;
     }
 }
-}
+// Class toggle for sticky header
+.stickyTracker.is-pinned {
+    background-color: $bg-white;
+  } 

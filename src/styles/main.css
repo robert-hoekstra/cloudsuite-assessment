@@ -6138,16 +6138,18 @@ body {
   font-size: 1.125rem;
   color: #4b4b4b;
 }
-body span {
+
+span {
   font-style: normal;
   font-family: "Font Awesome 5 Free";
 }
-body h1,
-body h2,
-body h3,
-body h4,
-body h5,
-body h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Gochi Hand", sans-serif;
   font-weight: 400;
   width: 660px;
@@ -6157,16 +6159,19 @@ body h6 {
   font-size: 78px;
   line-height: 90px;
 }
-body h1 {
+
+h1 {
   font-size: 4.875rem;
   line-height: 5.625rem;
   color: #ffffff;
 }
-body img {
+
+img {
   width: 257px;
   height: 40px;
 }
-body button {
+
+button {
   background-color: #f6d524;
   border: none;
   border-radius: 100px;
@@ -6184,20 +6189,27 @@ body button {
   font-size: 22px;
   line-height: 26px;
 }
-body button:hover {
+
+button:hover {
   transition: 0.3s;
   background-color: #e1c323;
 }
-body header {
-  position: fixed;
+
+header {
+  z-index: 1;
+  position: sticky;
+  top: -1px;
   transition: 0.3s;
+  margin-bottom: -100px;
 }
-body header:hover {
+
+header:hover {
   transition: 0.3s;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.05);
   background-color: #ffffff;
 }
-body nav {
+
+nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -6206,11 +6218,12 @@ body nav {
   width: 1680px;
   height: 100px;
 }
-body nav a:hover {
+nav a:hover {
   transition: 0.3s;
   color: #f6d524;
 }
-body input {
+
+input {
   padding: 8px 10px;
   width: 369.5px;
   height: 40px;
@@ -6220,16 +6233,20 @@ body input {
   border-radius: 40px;
   box-sizing: border-box;
 }
-body main {
+
+main {
   min-height: 1080px;
 }
-body footer {
+
+footer {
   height: 100vh;
 }
-body section {
+
+section {
   min-height: 100vh;
 }
-body .shop-navigation {
+
+.shop-navigation {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -6239,11 +6256,12 @@ body .shop-navigation {
   width: 581.5px;
   height: 40px;
 }
-body .shop-navigation a {
+.shop-navigation a {
   text-align: right;
   height: 22px;
 }
-body .main-navigation {
+
+.main-navigation {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -6251,10 +6269,11 @@ body .main-navigation {
   width: 581.5px;
   height: 31px;
 }
-body .main-navigation li {
+.main-navigation li {
   padding: 5px 15px;
 }
-body .dropdown-menu {
+
+.dropdown-menu {
   display: none;
   flex-direction: column;
   align-items: left;
@@ -6274,18 +6293,21 @@ body .dropdown-menu {
   padding-left: 30px;
   box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.15);
 }
-body .dropdown-menu a:hover {
+.dropdown-menu a:hover {
   text-decoration-line: underline;
   color: #4b4b4b !important;
 }
-body .visible {
+
+.visible {
   display: flex;
 }
-body .dropdown-container {
+
+.dropdown-container {
   padding-bottom: 40.5px;
   position: relative;
 }
-body .dropdown-container:hover {
+
+.dropdown-container:hover {
   padding-bottom: 11.5px;
   transition: 0.3s;
   padding: 5px 15px;
@@ -6295,16 +6317,18 @@ body .dropdown-container:hover {
   border-radius: 100px;
   color: #ffffff !important;
 }
-body .dropdown-container:hover a:hover {
+.dropdown-container:hover a:hover {
   color: #ffffff;
 }
-body .dropdown-container:hover .dropdown-menu,
-body nav:hover .dropdown-menu:hover {
+
+.dropdown-container:hover .dropdown-menu,
+nav:hover .dropdown-menu:hover {
   display: flex;
 }
-body .hero {
+
+.hero {
   height: 100%;
-  background: linear-gradient(0deg, rgba(131, 182, 210, 0.9), rgba(131, 182, 210, 0.9)), url("../assets/background-image.jpeg");
+  background: linear-gradient(0deg, rgba(131, 182, 210, 0.8980392157), rgba(131, 182, 210, 0.8980392157)), url("../assets/background-image.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -6312,38 +6336,48 @@ body .hero {
   justify-content: center;
   padding-left: 165px;
 }
-body .hero h1 {
+.hero h1 {
   width: 660px;
   height: 270px;
 }
-body .shadow {
+
+.shadow {
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2);
   border-radius: 100px;
 }
-body .parallax-wrapper {
+
+.parallax-wrapper {
   overflow-y: hidden;
 }
-body .parallax {
+
+.parallax {
   background-size: cover;
   background-position: center;
 }
-body .searchBar {
+
+.searchBar {
   position: relative;
 }
-body .searchBar ::placeholder {
+.searchBar ::placeholder {
   padding-left: 1rem;
 }
-body .searchBar span {
+
+.searchBar span {
   position: absolute;
   color: gray;
   left: 1rem;
   top: 12px;
 }
-body .account {
+
+.account {
   width: 116px;
 }
-body .account span {
+.account span {
   margin-right: 5px;
+}
+
+.stickyTracker.is-pinned {
+  background-color: #ffffff;
 }
 
 /*# sourceMappingURL=main.css.map */

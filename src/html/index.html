@@ -10,15 +10,16 @@
     <title>Front-end assessment (Medior)| Cloudsuite</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link rel="stylesheet" href="../src/styles/main.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
   </head>
   <body>
-    <header>
+    <header class="stickyTracker">
       <nav>
         <ul class="main-navigation">
           <li id="dropdown" class="dropdown-container">
-            <a class="rotate-container"href="#">Products <span class="fa fa-angle-down"></span></a>
+            <a class="rotate-container" href="#"
+              >Products <span class="fa fa-angle-down"></span
+            ></a>
             <ul class="dropdown-menu">
               <li><a href="#">Living</a></li>
               <li><a href="#">Garden</a></li>
@@ -35,13 +36,13 @@
         </ul>
         <a href="/" title="to home"
           ><img
-            src="../src/assets/logo/cloudsuite-logo-rgb 1.svg"
+            src="../assets/logo/logo.svg"
             alt="Logo of the Cloudsuite company."
         /></a>
         <div class="shop-navigation">
           <div class="searchBar">
             <input
-            class="fa fa-solid"
+              class="fa fa-solid"
               type="search"
               name="searchbar"
               id="searchbar"
@@ -49,9 +50,10 @@
             />
             <span class="fa-solid fa-search"></span>
           </div>
-          <div class="account"><a href="/my-account"><span class="fa fa-user"></span>My account</a></div>
-          <a href="/cart"><span class="fa fa-shopping-cart">
-          </span></a>
+          <div class="account">
+            <a href="/my-account"><span class="fa fa-user"></span>My account</a>
+          </div>
+          <a href="/cart"><span class="fa fa-shopping-cart"> </span></a>
         </div>
       </nav>
     </header>
@@ -67,8 +69,9 @@
       <span>I am just here to create space for scrollable behavior ;)</span>
       <span class="fa-solid fa-user"></span>
     </footer>
-    <script src="../src/scripts/parallax.js"></script>
-    <script src="../src/scripts/dropdown.js"></script>
-    <script src="../src/scripts/rotate.js"></script>
+    <script src="../scripts/parallax.js"></script>
+    <script src="../scripts/dropdown.js"></script>
+    <script src="../scripts/rotate.js"></script>
+    <script src="../scripts/stickyTracker.js"></script>
   </body>
 </html>
